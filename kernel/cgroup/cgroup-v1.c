@@ -549,6 +549,13 @@ static ssize_t __cgroup1_procs_write(struct kernfs_open_file *of,
                task_is_zygote(task->parent)) {
                 cpu_input_boost_kick_max(1000);
                 devfreq_boost_kick_max(DEVFREQ_CPU_LLCC_DDR_BW, 1000);
+                devfreq_boost_kick_max(DEVFREQ_MSM_CPU0_CPU_L3_LAT, 1000);
+                devfreq_boost_kick_max(DEVFREQ_MSM_CPU4_CPU_L3_LAT, 1000);
+                devfreq_boost_kick_max(DEVFREQ_MSM_CPU7_CPU_L3_LAT, 1000);
+                devfreq_boost_kick_max(DEVFREQ_MSM_CPU0_CPU_LLCC_LAT, 1000);
+                devfreq_boost_kick_max(DEVFREQ_MSM_CPU4_CPU_LLCC_LAT, 1000);
+                devfreq_boost_kick_max(DEVFREQ_MSM_CPU0_LLCC_DDR_LAT, 1000);
+                devfreq_boost_kick_max(DEVFREQ_MSM_CPU4_LLCC_DDR_LAT, 1000);
         }
 
 out_finish:
